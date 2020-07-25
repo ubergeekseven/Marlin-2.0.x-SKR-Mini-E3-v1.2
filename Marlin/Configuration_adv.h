@@ -1,7 +1,8 @@
 /**
+ 	
  * Marlin 3D Printer Firmware
  * Copyright (c) 2019 MarlinFirmware [https://github.com/MarlinFirmware/Marlin]
- *
+ * changed by michaeldot on 4-12-2020									
  * Based on Sprinter and grbl.
  * Copyright (c) 2011 Camiel Gubbels / Erik van der Zalm
  *
@@ -197,6 +198,56 @@
     #define DEFAULT_Kc (100) //heating power=Kc*(e_speed)
     #define LPQ_MAX_LEN 50
   #endif
+
+	 
+																							
+																										   
+																			  
+																		 
+	
+																   
+																		  
+																	   
+													  
+																									  
+	
+			 
+														 
+											
+	
+									 
+									 
+																											  
+																											
+																											  
+																									  
+											   
+																													 
+												 
+																							   
+																															
+	 
+						   
+							  
+													
+													   
+																		
+																			 
+																			  
+
+																									
+																														  
+																											   
+
+																																					   
+																						 
+
+		 
+																										
+																								   
+																												
+		  
+		
 #endif
 
 /**
@@ -290,6 +341,9 @@
 // before setting a PWM value. (Does not work with software PWM for fan on Sanguinololu)
 //#define FAN_KICKSTART_TIME 100
 
+												   
+						
+
 /**
  * PWM Fan Scaling
  *
@@ -379,6 +433,7 @@
   #define INVERT_CASE_LIGHT false             // Set true if Case Light is ON when pin is LOW
   #define CASE_LIGHT_DEFAULT_ON true          // Set default power-up state on
   #define CASE_LIGHT_DEFAULT_BRIGHTNESS 105   // Set default power-up brightness (0-255, requires PWM pin)
+														  
   //#define CASE_LIGHT_MENU                   // Add Case Light options to the LCD menu
   //#define CASE_LIGHT_NO_BRIGHTNESS          // Disable brightness control. Enable for non-PWM lighting.
   //#define CASE_LIGHT_USE_NEOPIXEL           // Use Neopixel LED as case light, requires NEOPIXEL_LED.
@@ -572,7 +627,7 @@
    * differs, a mode set eeprom write will be completed at initialization.
    * Use the option below to force an eeprom write to a V3.1 probe regardless.
    */
-  //#define BLTOUCH_SET_5V_MODE
+  //#define BLTOUCH_SET_5V_MODE //older config had 5v set. 
 
   /**
    * Safety: Activate if connecting a probe with an unknown voltage mode.
@@ -591,7 +646,7 @@
   //#define BLTOUCH_HS_MODE
 
   // Safety: Enable voltage mode settings in the LCD menu.
-  #define BLTOUCH_LCD_VOLTAGE_MENU
+  #define BLTOUCH_LCD_VOLTAGE_MENU //this is turned off in older version of ender MB
 
 #endif // BLTOUCH
 
@@ -603,9 +658,25 @@
 #if ENABLED(Z_STEPPER_AUTO_ALIGN)
   // Define probe X and Y positions for Z1, Z2 [, Z3]
   #define Z_STEPPER_ALIGN_X {  10, 150, 290 }
+
+																			 
+											   
+												   
+													  
+																  
+												 
+																 
   #define Z_STEPPER_ALIGN_Y { 290,  10, 290 }
+	   
+																		  
+																				 
+														
+								   
+		
+
   // Set number of iterations to align
   #define Z_STEPPER_ALIGN_ITERATIONS 3
+
   // Enable to restore leveling setup after operation
   #define RESTORE_LEVELING_AFTER_G34
 
@@ -889,6 +960,18 @@
 // Add an 'M73' G-code to set the current percentage
 //#define LCD_SET_PROGRESS_MANUALLY
 
+													  
+						  
+
+										   
+																			 
+																				
+								  
+																									 
+																							   
+		
+	  
+
 #if HAS_CHARACTER_LCD && HAS_PRINT_PROGRESS
   //#define LCD_PROGRESS_BAR              // Show a progress bar on HD44780 LCDs for SD printing
   #if ENABLED(LCD_PROGRESS_BAR)
@@ -932,6 +1015,8 @@
    */
   //#define POWER_LOSS_RECOVERY
   #if ENABLED(POWER_LOSS_RECOVERY)
+																								
+																							   
     //#define POWER_LOSS_PIN         44 // Pin to detect power loss
     //#define POWER_LOSS_STATE     HIGH // State of pin indicating power loss
     //#define POWER_LOSS_PULL           // Set pullup / pulldown as appropriate
@@ -1206,9 +1291,26 @@
   //#define TOUCH_UI_MIRRORED
 
   // Enable UTF8 rendering capabilities.
+											 
   //#define TOUCH_UI_USE_UTF8
   #if ENABLED(TOUCH_UI_USE_UTF8)
+															 
+															  
     #define TOUCH_UI_UTF8_WESTERN_CHARSET
+											  
+															  
+													   
+													   
+													
+												 
+																	  
+														  
+														  
+													
+													   
+													   
+															 
+		  
   #endif
 
   // When labels do not fit buttons, use smaller font
@@ -1216,10 +1318,20 @@
 
   // Runtime language selection (otherwise LCD_LANGUAGE)
   //#define TOUCH_UI_LANGUAGE_MENU
+							 
+							 
+							 
+							 
 
   // Use a numeric passcode for "Screen lock" keypad.
   // (recommended for smaller displays)
   //#define TOUCH_UI_PASSCODE
+
+												
+						  
+
+																		 
+								   
 #endif
 
 //
@@ -1265,6 +1377,7 @@
   //#define BABYSTEP_XY                     // Also enable X/Y Babystepping. Not supported on DELTA!
   #define BABYSTEP_INVERT_Z false           // Change if Z babysteps should go the other way
   #define BABYSTEP_MULTIPLICATOR  10         // Babysteps are very small. Increase for faster motion.
+									 
 
   #define DOUBLECLICK_FOR_Z_BABYSTEPPING    // Double-click on the Status Screen for Z Babystepping.
   #if ENABLED(DOUBLECLICK_FOR_Z_BABYSTEPPING)
@@ -1312,6 +1425,42 @@
 #endif
 
 // @section leveling
+
+   
+													   
+																
+   
+														   
+						   
+							
+						   
+						   
+							
+						   
+	  
+
+   
+														   
+															  
+														   
+					
+  
+															   
+															 
+											  
+												 
+  
+																 
+															 
+																  
+											  
+   
+								   
+											  
+											   
+											   
+											  
+	  
 
 #if EITHER(MESH_BED_LEVELING, AUTO_BED_LEVELING_UBL)
   // Override the mesh area if the automatic (max) area is too large
@@ -1737,6 +1886,7 @@
 
   #if AXIS_IS_TMC(X)
     #define X_CURRENT     580  // (mA) RMS current. Multiply by 1.414 for peak current.
+																				
     #define X_MICROSTEPS   16  // 0..256
     #define X_RSENSE     0.11
     #define X_CHAIN_POS     0  // 0 - Not chained, 1 - MCU MOSI connected, 2 - next in chain, ...
@@ -1744,6 +1894,7 @@
 
   #if AXIS_IS_TMC(X2)
     #define X2_CURRENT    800
+									  
     #define X2_MICROSTEPS  16
     #define X2_RSENSE    0.11
     #define X2_CHAIN_POS    0
@@ -1751,6 +1902,7 @@
 
   #if AXIS_IS_TMC(Y)
     #define Y_CURRENT     580
+									 
     #define Y_MICROSTEPS   16
     #define Y_RSENSE     0.11
     #define Y_CHAIN_POS     0
@@ -1758,6 +1910,7 @@
 
   #if AXIS_IS_TMC(Y2)
     #define Y2_CURRENT    800
+									  
     #define Y2_MICROSTEPS  16
     #define Y2_RSENSE    0.11
     #define Y2_CHAIN_POS    0
@@ -1765,6 +1918,7 @@
 
   #if AXIS_IS_TMC(Z)
     #define Z_CURRENT     580
+									 
     #define Z_MICROSTEPS   16
     #define Z_RSENSE     0.11
     #define Z_CHAIN_POS     0
@@ -1772,6 +1926,7 @@
 
   #if AXIS_IS_TMC(Z2)
     #define Z2_CURRENT    800
+									  
     #define Z2_MICROSTEPS  16
     #define Z2_RSENSE    0.11
     #define Z2_CHAIN_POS    0
@@ -1779,6 +1934,7 @@
 
   #if AXIS_IS_TMC(Z3)
     #define Z3_CURRENT    800
+									  
     #define Z3_MICROSTEPS  16
     #define Z3_RSENSE    0.11
     #define Z3_CHAIN_POS    0
@@ -2449,11 +2605,17 @@
   #define USER_DESC_3 "Preheat for " PREHEAT_2_LABEL
   #define USER_GCODE_3 "M140 S" STRINGIFY(PREHEAT_2_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_2_TEMP_HOTEND)
 
-  #define USER_DESC_4 "Heat Bed/Home/Level"
-  #define USER_GCODE_4 "M140 S" STRINGIFY(PREHEAT_2_TEMP_BED) "\nG28\nG29"
+  #define USER_DESC_4 "Preheat for " PREHEAT_3_LABEL
+  #define USER_GCODE_4 "M140 S" STRINGIFY(PREHEAT_3_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_3_TEMP_HOTEND)
 
-  #define USER_DESC_5 "Home & Info"
-  #define USER_GCODE_5 "G28\nM503"
+  #define USER_DESC_5 "Preheat for " PREHEAT_4_LABEL
+  #define USER_GCODE_5 "M140 S" STRINGIFY(PREHEAT_4_TEMP_BED) "\nM104 S" STRINGIFY(PREHEAT_4_TEMP_HOTEND)
+
+  #define USER_DESC_6 "Heat Bed/Home/Level"
+  #define USER_GCODE_6 "M140 S" STRINGIFY(PREHEAT_2_TEMP_BED) "\nG28\nG29"
+
+  #define USER_DESC_7 "Home & Info"
+  #define USER_GCODE_7 "G28\nM503"
 #endif
 
 /**
@@ -2476,6 +2638,13 @@
 #endif
 
 /**
+				 
+  
+												 
+   
+						
+
+   
  * I2C position encoders for closed loop control.
  * Developed by Chris Barr at Aus3D.
  *
